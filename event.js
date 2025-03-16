@@ -1,15 +1,10 @@
 const EventEmitter = require('events');
-
-const customEmitter = new EventEmitter();
+const School = require('./school');
 
 // on and emit methods keep track of events
 
-customEmitter.on("response", ()=>{
-    console.log(`data recieved`)
+School.on("response", ({ time, message })=>{
+    console.log(`data recieved ${time} ${message} `)
 })
-
-// raise an event
-
-setTimeout(() => {
-    customEmitter.emit("response")
-}, 2000);
+const school1 = new School();
+school1.startNew()
