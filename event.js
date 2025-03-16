@@ -8,7 +8,6 @@ customEmitter.on("response", ()=>{
     console.log(`data recieved`)
 })
 
-
 // raise an event
 
 setTimeout(() => {
